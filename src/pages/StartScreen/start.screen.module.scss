@@ -1,0 +1,74 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.start {
+  position: absolute;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 40%;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  &_title {
+    font-size: 5rem;
+    font-weight: 800;
+    margin: 0;
+    margin-top: -20px;
+    margin-bottom: -10px;
+    color: $text-color-primary;
+    animation: scale 500ms ease-in;
+  }
+  &_author {
+    font-size: 2rem;
+    color: white;
+    font-weight: 300;
+    animation: fade 500ms ease-in;
+  }
+  &_button {
+    @include button;
+    animation: fade 500ms ease-in;
+    &:hover {
+      @include button;
+      color: rgb(243, 55, 212);
+      box-shadow: 0 0 8px 3px rgba(243, 55, 212, 0.5);
+    }
+  }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    &_title {
+      font-size: 10rem;
+    }
+    &_author {
+      font-size: 4rem;
+    }
+    &_button {
+      padding: 0.5rem 4rem;
+      margin-top: 10px;
+      font-size: 2rem;
+      letter-spacing: 5px;
+    }
+  }
+  @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+    min-height: 52%;
+    &_title {
+      font-size: 10rem;
+    }
+    &_author {
+      font-size: 3rem;
+    }
+    &_button {
+      padding: 0.5rem 4rem;
+      margin-top: 10px;
+      font-size: 2rem;
+      letter-spacing: 5px;
+      &:hover {
+        padding: 0.5rem 4rem;
+        font-size: 2rem;
+        letter-spacing: 5px;
+      }
+    }
+  }
+}

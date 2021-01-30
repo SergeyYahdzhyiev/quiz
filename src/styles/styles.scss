@@ -1,0 +1,19 @@
+@import '~reset-css/sass/reset';
+@import '~bootstrap/scss/bootstrap';
+@import './variables.scss';
+
+body {
+  width: 100%;
+}
+
+.wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: $font-main;
+  background: $backgroun-gradient;
+}

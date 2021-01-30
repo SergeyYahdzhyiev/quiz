@@ -1,0 +1,33 @@
+@import '../assets/fonts/fonts.scss';
+
+$font-main: 'Gilroy', sans-serif;
+
+$backgroun-gradient: linear-gradient(
+  45deg,
+  rgba(138, 0, 138, 1) 0%,
+  rgba(205, 1, 193, 1) 65%,
+  rgba(236, 113, 255, 1) 100%
+);
+
+$button-gradient: linear-gradient(to right, #ffefba, #ffffff);
+
+$text-color-primary: rgb(247, 209, 129);
+$text-color-button: purple;
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

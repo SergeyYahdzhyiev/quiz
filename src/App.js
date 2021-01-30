@@ -1,3 +1,23 @@
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
+import { Container } from 'react-bootstrap';
+import { StartScreen } from './pages';
+
 export const App = () => {
-  return <h1>Hello Quiz!</h1>;
+  return (
+    <Router>
+      <Container className='wrapper' fluid>
+        <Switch>
+          <Route exact path='/'>
+            <Redirect to='/start' />
+          </Route>
+          <Route exact path='/start' component={StartScreen} />
+        </Switch>
+      </Container>
+    </Router>
+  );
 };
