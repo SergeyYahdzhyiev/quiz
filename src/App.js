@@ -5,7 +5,7 @@ import {
   Redirect,
 } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
-import { StartScreen } from './pages';
+import { StartScreen, PlayerScreen } from './pages';
 
 export const App = () => {
   return (
@@ -16,6 +16,7 @@ export const App = () => {
             <Redirect to='/start' />
           </Route>
           <Route exact path='/start' component={StartScreen} />
+          <Route exact path='/player' component={PlayerScreen} />
         </Switch>
       </Container>
     </Router>
