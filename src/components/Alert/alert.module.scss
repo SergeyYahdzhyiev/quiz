@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.alert {
+  @include alert;
+  animation: fade 200ms ease-in;
+  &__closing {
+    @include alert;
+    animation: fade-out 200ms ease-out;
+  }
+}

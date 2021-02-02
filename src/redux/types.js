@@ -2,3 +2,5 @@ export const SET_NAME = 'GAME:SET_PLAYER_NAME';
 
 export const SHOW_ALERT = 'ALERT:SHOW_ALERT';
 export const HIDE_ALERT = 'ALERT:HIDE_ALERT';
+export const START_CLOSING = 'ALERT:START_CLOSING';
+export const END_CLOSING = 'ALERT:END_CLOSING';

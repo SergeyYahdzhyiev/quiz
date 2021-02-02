@@ -1,9 +1,10 @@
-import { HIDE_ALERT, SHOW_ALERT } from '../types';
+import { HIDE_ALERT, SHOW_ALERT, START_CLOSING, END_CLOSING } from '../types';
 
 const initialState = {
   show: false,
   text: 'Default alert text.',
   closable: false,
+  closing: false,
 };
 
 export function alertReducer(state = initialState, action) {
@@ -19,6 +20,16 @@ export function alertReducer(state = initialState, action) {
       return {
         ...state,
         show: false,
+      };
+    case START_CLOSING:
+      return {
+        ...state,
+        closing: true,
+      };
+    case END_CLOSING:
+      return {
+        ...state,
+        closing: false,
       };
     default:
       return state;

@@ -12,9 +12,10 @@ export const InputForm = () => {
   const history = useHistory();
   const dispatch = useDispatch();
 
-  function handler() {
+  function handler(e) {
+    e.preventDefault();
     if (!value) {
-      dispatch(showAlert('Some text', true));
+      dispatch(showAlert('You have to enter some name', false));
     } else {
       dispatch(setName(value));
       setValue('');
@@ -23,12 +24,14 @@ export const InputForm = () => {
   }
   return (
     <Row className={styles.input}>
-      <input
-        type='text'
-        onChange={(e) => setValue(e.target.value)}
-        value={value}
-      />
-      <button onClick={handler}>CONFIRM</button>
+      <form onSubmit={handler}>
+        <input
+          type='text'
+          onChange={(e) => setValue(e.target.value)}
+          value={value}
+        />
+        <button type='submit'>CONFIRM</button>
+      </form>
     </Row>
   );
 };
