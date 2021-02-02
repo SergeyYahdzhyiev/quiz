@@ -23,6 +23,7 @@
   background: $button-gradient;
   color: rgb(77, 77, 255);
   font-size: 1rem;
+  transition: opacity 200ms;
   p {
     margin: 0;
     font-weight: 800;

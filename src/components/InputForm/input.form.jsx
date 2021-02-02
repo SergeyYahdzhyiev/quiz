@@ -15,7 +15,7 @@ export const InputForm = () => {
   function handler(e) {
     e.preventDefault();
     if (!value) {
-      dispatch(showAlert('You have to enter some name', false));
+      dispatch(showAlert('You have to enter some name', true));
     } else {
       dispatch(setName(value));
       setValue('');

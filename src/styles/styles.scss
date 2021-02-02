@@ -17,3 +17,10 @@ body {
   font-family: $font-main;
   background: $backgroun-gradient;
 }
+
+.alerts-enter {
+  opacity: 0;
+}
+.alerts-exit {
+  opacity: 1;
+}
