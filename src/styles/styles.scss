@@ -21,6 +21,14 @@ body {
 .alerts-enter {
   opacity: 0;
 }
+.alerts-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
 .alerts-exit {
   opacity: 1;
+}
+.alerts-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
 }

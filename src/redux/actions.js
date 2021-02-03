@@ -20,13 +20,15 @@ export function showAlert(text, closable) {
       });
       setTimeout(() => {
         dispatch(hideAlert());
-      }, 1500);
+      }, 2000);
     }
   };
 }
 
 export function hideAlert() {
-  return { type: HIDE_ALERT };
+  return {
+    type: HIDE_ALERT,
+  };
 }
 
 export function setName(name) {
