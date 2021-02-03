@@ -9,9 +9,9 @@ export const Admin = () => {
     e.preventDefault();
   };
 
-  const axiosHandler = async (items) => {
-    await axios.post(`${url}/themes/test2.json`, items);
-    console.log('fetched');
+  const axiosHandler = async () => {
+    const res = await axios.get(`${url}/themes.json`);
+    console.log('fetched', res.data);
   };
 
   return (
@@ -21,11 +21,7 @@ export const Admin = () => {
           Submit
         </Button>
       </form>
-      <Button
-        className='mt-5'
-        variant='warning'
-        // onClick={() => axiosHandler()}
-      >
+      <Button className='mt-5' variant='warning' onClick={() => axiosHandler()}>
         Perform axios operation
       </Button>
     </Container>

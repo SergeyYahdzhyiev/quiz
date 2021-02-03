@@ -3,12 +3,17 @@ import {
   SET_THEME,
   SET_QUESTION,
   UPDATE_QUESTIONS,
+  FETCH_THEMES,
+  SHOW_LOADER,
+  HIDE_LOADER,
 } from '../types';
 
 const initialState = {
+  themes: [],
   theme: '',
   questions: [],
   question: {},
+  loading: false,
 };
 
 export function questionReducer(state = initialState, action) {
@@ -17,10 +22,16 @@ export function questionReducer(state = initialState, action) {
       return { ...state, questions: action.payload };
     case UPDATE_QUESTIONS:
       return { ...state, questions: action.payload };
+    case FETCH_THEMES:
+      return { ...state, themes: action.payload };
     case SET_THEME:
       return { ...state, theme: action.payload };
     case SET_QUESTION:
       return { ...state, question: action.payload };
+    case SHOW_LOADER:
+      return { ...state, loading: true };
+    case HIDE_LOADER:
+      return { ...state, loading: false };
     default:
       return state;
   }

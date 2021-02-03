@@ -4,7 +4,6 @@ const initialState = {
   show: false,
   text: 'Default alert text.',
   closable: false,
-  closing: false,
 };
 
 export function alertReducer(state = initialState, action) {
