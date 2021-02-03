@@ -1,0 +1,14 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.themes {
+  text-align: center;
+  padding-top: 2rem;
+  h1 {
+    color: $text-color-primary;
+    font-weight: 800;
+  }
+  h4 {
+    color: white;
+  }
+}
