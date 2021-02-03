@@ -3,15 +3,15 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Container } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
 
-import { Alert, ThemesList } from '../../components';
+import { Alert, Loader, ThemesList } from '../../components';
 import { fetchThemes } from '../../redux/actions';
 
 import styles from './themes.screen.module.scss';
 
 export const ThemesScreen = () => {
   const { name } = useSelector((state) => state.game);
-  const { loading } = useSelector((state) => state.questions);
   const { show } = useSelector((state) => state.alert);
+  const { loading } = useSelector((state) => state.questions);
 
   const dispatch = useDispatch();
 
@@ -24,7 +24,7 @@ export const ThemesScreen = () => {
     <Container className={styles.themes} fluid>
       <h1>Hello {name}!</h1>
       <h4>Please, choose one of the themes:</h4>
-      <ThemesList />
+      {loading ? <Loader /> : <ThemesList />}
       <Container className='text-center'>
         <CSSTransition
           in={show}

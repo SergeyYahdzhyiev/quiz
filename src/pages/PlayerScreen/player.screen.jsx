@@ -15,7 +15,7 @@ export const PlayerScreen = () => {
       <Container className='text-center'>
         <CSSTransition
           in={show}
-          timeout={300}
+          timeout={500}
           classNames='alerts'
           unmountOnExit
         >

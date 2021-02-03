@@ -25,7 +25,7 @@ body {
 .alerts-enter-active,
 .themes-enter-active {
   opacity: 1;
-  transition: opacity 300ms ease-in;
+  transition: opacity 500ms ease-in;
 }
 .alerts-exit,
 .themes-exit {
@@ -34,5 +34,5 @@ body {
 .alerts-exit-active,
 .themes-exit-active {
   opacity: 0;
-  transition: opacity 300ms ease-out;
+  transition: opacity 500ms ease-out;
 }

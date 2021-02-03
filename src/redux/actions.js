@@ -77,11 +77,15 @@ export function fetchQuestions(theme) {
 export function fetchThemes() {
   return async function (dispatch) {
     try {
+      dispatch(showLoader());
       const res = await axios.get(`${url}/themes.json`);
       const payload = Object.keys(res.data);
 
       dispatch({ type: FETCH_THEMES, payload });
+      dispatch(hideLoader());
     } catch (e) {
+      dispatch(hideLoader());
+      dispatch(showAlert('Something went wrong =(', true));
       console.error(e.name + ':' + e.message);
     }
   };

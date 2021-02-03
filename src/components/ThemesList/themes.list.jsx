@@ -7,10 +7,16 @@ import styles from './themes.list.module.scss';
 
 export const ThemesList = () => {
   const { themes } = useSelector((state) => state.questions);
+
   return (
     <TransitionGroup className={styles.themes_list}>
       {themes.map((theme, index) => (
-        <CSSTransition key={index} timeout={300} classNames='alerts'>
+        <CSSTransition
+          key={index}
+          timeout={500}
+          classNames='themes'
+          mountOnEnter
+        >
           <ThemeButton text={theme} />
         </CSSTransition>
       ))}

@@ -4,6 +4,7 @@
 .themes {
   text-align: center;
   padding-top: 2rem;
+  animation: fade 500ms ease-in;
   h1 {
     color: $text-color-primary;
     font-weight: 800;
