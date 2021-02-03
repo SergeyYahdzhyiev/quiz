@@ -21,7 +21,7 @@
   margin-top: 1rem;
   border-radius: 2rem;
   background: $button-gradient;
-  color: rgb(77, 77, 255);
+  color: $text-color-alert;
   font-size: 1rem;
   transition: opacity 200ms;
   p {
@@ -29,7 +29,7 @@
     font-weight: 800;
   }
   button {
-    background: rgb(77, 77, 255);
+    background: $text-color-alert;
     border: none;
     color: white;
     font-weight: 800;

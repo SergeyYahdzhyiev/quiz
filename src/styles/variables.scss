@@ -10,9 +10,12 @@ $backgroun-gradient: linear-gradient(
 );
 
 $button-gradient: linear-gradient(to right, #ffefba, #ffffff);
+$button-shadow-color: rgba(243, 55, 212, 0.5);
 
+$text-color-pink: rgb(243, 55, 212);
 $text-color-primary: rgb(247, 209, 129);
 $text-color-button: purple;
+$text-color-alert: rgb(77, 77, 255);
 
 @keyframes fade {
   0% {

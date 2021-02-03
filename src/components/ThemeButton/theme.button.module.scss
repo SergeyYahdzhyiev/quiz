@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.theme_button {
+  @include button;
+  margin-top: 1rem;
+  color: $text-color-alert;
+  font-weight: 300;
+  font-size: 2rem;
+  min-width: 200px;
+  &:hover {
+    @include button;
+    font-weight: 300;
+    box-shadow: 0 0 8px 3px $button-shadow-color;
+    color: $text-color-pink;
+  }
+}

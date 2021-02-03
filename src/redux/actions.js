@@ -7,6 +7,7 @@ import {
   FETCH_THEMES,
   SHOW_LOADER,
   HIDE_LOADER,
+  SET_THEME,
 } from './types';
 
 const url = process.env.REACT_APP_DB_URL;
@@ -45,6 +46,13 @@ export function hideAlert() {
 export function setName(name) {
   return {
     type: SET_NAME,
+    payload: name,
+  };
+}
+
+export function setTheme(name) {
+  return {
+    type: SET_THEME,
     payload: name,
   };
 }

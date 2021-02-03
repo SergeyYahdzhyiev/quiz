@@ -18,17 +18,21 @@ body {
   background: $backgroun-gradient;
 }
 
-.alerts-enter {
+.alerts-enter,
+.themes-enter {
   opacity: 0;
 }
-.alerts-enter-active {
+.alerts-enter-active,
+.themes-enter-active {
   opacity: 1;
   transition: opacity 300ms ease-in;
 }
-.alerts-exit {
+.alerts-exit,
+.themes-exit {
   opacity: 1;
 }
-.alerts-exit-active {
+.alerts-exit-active,
+.themes-exit-active {
   opacity: 0;
   transition: opacity 300ms ease-out;
 }
