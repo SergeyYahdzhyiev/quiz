@@ -1,0 +1,62 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.confirm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 2rem;
+  margin: auto;
+  max-width: 50%;
+  color: $text-color-alert;
+  background: $button-gradient;
+  border-radius: 1.5rem;
+  transform: translateY(50%);
+  animation: fade 500ms ease-in;
+  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+    transform: translateY(30%);
+    max-width: 80%;
+  }
+
+  p {
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+      margin: 1rem 0;
+      margin-bottom: 2rem;
+    }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+      font-size: 1rem;
+      margin: 1rem 0;
+    }
+  }
+  button {
+    @include button;
+    font-size: 1.5rem;
+    color: white;
+    background: rgb(170, 150, 169);
+    transition: transform 500ms ease;
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+    &:hover {
+      @include button;
+      background: rgb(170, 150, 169);
+      color: white;
+      transform: scale(1.1);
+    }
+    &:first-of-type {
+      background: $text-color-alert;
+      color: white;
+      margin-right: 0.8rem;
+      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+        margin-right: 0.5rem;
+      }
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}

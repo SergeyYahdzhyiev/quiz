@@ -2,6 +2,9 @@
 
 .input {
   form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
     input {
       background-color: inherit;
       border: 3px solid $text-color-primary;
@@ -13,6 +16,9 @@
       letter-spacing: 2px;
       &:focus {
         outline: none;
+      }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+        max-width: 50%;
       }
     }
     button {
@@ -32,6 +38,11 @@
       }
       &:active {
         transform: scale(0.9);
+      }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+        font-size: 0.8rem;
+        padding-left: 10px;
+        padding-right: 10px;
       }
     }
   }

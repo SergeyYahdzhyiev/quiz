@@ -12,7 +12,11 @@
   top: 40%;
   transform: translateY(-60%);
   animation: fade 500ms ease-in;
+
   &_title {
     color: white;
+    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+      font-size: 1.5rem;
+    }
   }
 }

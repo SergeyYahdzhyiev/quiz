@@ -6,7 +6,13 @@ import {
 } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 
-import { StartScreen, PlayerScreen, Admin, ThemesScreen } from './pages';
+import {
+  StartScreen,
+  PlayerScreen,
+  Admin,
+  ThemesScreen,
+  Confirm,
+} from './pages';
 
 export const App = () => {
   return (
@@ -19,6 +25,7 @@ export const App = () => {
           <Route exact path='/start' component={StartScreen} />
           <Route exact path='/player' component={PlayerScreen} />
           <Route exact path='/themes' component={ThemesScreen} />
+          <Route exact path='/confirm' component={Confirm} />
           <Route exact path='/admin' component={Admin} />
         </Switch>
       </Container>
