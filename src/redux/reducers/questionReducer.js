@@ -2,10 +2,10 @@ import {
   FETCH_QUESTIONS,
   SET_THEME,
   SET_QUESTION,
-  UPDATE_QUESTIONS,
   FETCH_THEMES,
   SHOW_LOADER,
   HIDE_LOADER,
+  UPDATE_QUESTIONS,
 } from '../types';
 
 const initialState = {

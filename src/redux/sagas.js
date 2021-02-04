@@ -1,8 +1,9 @@
-import { takeEvery, all, select } from 'redux-saga/effects';
-import { SET_NAME } from './types';
+import { takeEvery, all, select, put } from 'redux-saga/effects';
+import { updateQuestions } from './actions';
+import { SET_NAME, SET_QUESTION } from './types';
 
 export function* rootSaga() {
-  yield all([nameWatcher()]);
+  yield all([nameWatcher(), questionWatcher()]);
 }
 
 function* nameWatcher() {
@@ -12,4 +13,16 @@ function* nameWatcher() {
 function* nameWorker() {
   const state = yield select();
   yield localStorage.setItem('playerName', state.game.name);
+}
+
+function* questionWatcher() {
+  yield takeEvery(SET_QUESTION, questionWorker);
+}
+
+function* questionWorker() {
+  const state = yield select();
+  const question = yield state.questions.question;
+  const questions = yield state.questions.questions;
+  const payload = yield questions.splice(questions.indexOf(question), 1);
+  yield put(updateQuestions(payload));
 }
