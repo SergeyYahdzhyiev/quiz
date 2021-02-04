@@ -3,10 +3,11 @@
 $font-main: 'Gilroy', sans-serif;
 
 $backgroun-gradient: linear-gradient(
-  45deg,
-  rgba(138, 0, 138, 1) 0%,
-  rgba(205, 1, 193, 1) 65%,
-  rgba(236, 113, 255, 1) 100%
+  50deg,
+  rgb(207, 42, 196) 0%,
+  rgba(205, 1, 193, 1) 25%,
+  rgba(205, 1, 193, 1) 85%,
+  rgb(207, 42, 196) 100%
 );
 
 $button-gradient: linear-gradient(to right, #fafbff, #ffffff);

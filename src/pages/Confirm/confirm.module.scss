@@ -6,6 +6,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 1rem 2rem;
+  padding-bottom: 1.5rem;
   margin: auto;
   max-width: 50%;
   color: $text-color-alert;
@@ -19,7 +20,7 @@
   }
 
   p {
-    margin: 2rem 0;
+    margin: 1.5rem 0;
     font-size: 1.5rem;
     text-align: center;
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
