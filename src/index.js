@@ -9,7 +9,7 @@ import createSagaMiddleware from 'redux-saga';
 
 import { App } from './App';
 import { rootReducer } from './redux/reducers';
-import { sagaWatcher } from './redux/sagas';
+import { rootSaga } from './redux/sagas';
 
 const saga = createSagaMiddleware();
 
@@ -21,7 +21,7 @@ const store = createStore(
   )
 );
 
-saga.run(sagaWatcher);
+saga.run(rootSaga);
 
 const app = (
   <Provider store={store}>

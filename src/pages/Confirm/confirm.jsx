@@ -14,7 +14,7 @@ export const Confirm = () => {
         Do you want to start game with the&nbsp;
         <strong>{capitalize(theme)}</strong> theme?
       </p>
-      <Row className='justify-content-end'>
+      <Row className='justify-content-center'>
         <button
           className={styles.confirm_button}
           onClick={() => history.push('/game')}

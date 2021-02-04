@@ -1,7 +1,7 @@
 import { SET_NAME } from '../types';
 
 const initialState = {
-  name: '',
+  name: localStorage.getItem('playerName') || 'Player',
   score: 0,
   prizePool: 100,
   lives: 3,
