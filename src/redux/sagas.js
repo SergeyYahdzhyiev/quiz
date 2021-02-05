@@ -23,6 +23,9 @@ function* questionWorker() {
   const state = yield select();
   const question = yield state.questions.question;
   const questions = yield state.questions.questions;
-  const payload = yield questions.splice(questions.indexOf(question), 1);
+  const payload = yield questions.filter(
+    (q) => q.question !== question.question
+  );
+  yield console.log(payload);
   yield put(updateQuestions(payload));
 }

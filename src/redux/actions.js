@@ -64,6 +64,7 @@ export function fetchQuestions(theme) {
       dispatch(hideLoader());
     } catch (e) {
       dispatch(hideLoader());
+      dispatch(showAlert('Something went wrong =(', true));
       console.error(e.name + ':' + e.message);
     }
   };
@@ -74,7 +75,7 @@ export function updateQuestions(newQuestions) {
 }
 
 export function setQuestion(questions) {
-  const index = Math.floor(Math.random * questions.length);
+  const index = Math.floor(Math.random() * questions.length);
   const payload = questions[index];
   return {
     type: SET_QUESTION,

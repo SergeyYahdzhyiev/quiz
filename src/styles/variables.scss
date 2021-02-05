@@ -36,6 +36,20 @@ $text-color-alert: rgb(77, 77, 255);
   }
 }
 
+@keyframes slide {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @keyframes fade-out {
   0% {
     opacity: 1;
