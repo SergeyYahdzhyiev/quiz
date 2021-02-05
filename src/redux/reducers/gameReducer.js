@@ -6,6 +6,8 @@ import {
   INCREASE_SCORE,
   LOSE_LIFE,
   DOUBLE_PRIZE_POOL,
+  LOSE_SKIP,
+  RESET_SKIPS,
 } from '../types';
 
 const initialState = {
@@ -13,6 +15,7 @@ const initialState = {
   score: 0,
   prizePool: 100,
   lives: 3,
+  skips: 3,
 };
 
 export function gameReducer(state = initialState, action) {
@@ -23,6 +26,8 @@ export function gameReducer(state = initialState, action) {
       return { ...state, lives: 3 };
     case RESET_PRIZE_POOL:
       return { ...state, prizePool: 100 };
+    case RESET_SKIPS:
+      return { ...state, skips: 3 };
     case DOUBLE_PRIZE_POOL:
       return { ...state, prizePool: state.prizePool * 2 };
     case RESET_SCORE:
@@ -31,6 +36,8 @@ export function gameReducer(state = initialState, action) {
       return { ...state, score: state.score + state.prizePool };
     case LOSE_LIFE:
       return { ...state, lives: state.lives - 1 };
+    case LOSE_SKIP:
+      return { ...state, skips: state.skips - 1 };
     default:
       return state;
   }

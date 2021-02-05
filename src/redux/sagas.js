@@ -1,9 +1,28 @@
 import { takeEvery, all, select, put } from 'redux-saga/effects';
-import { doublePrize, setQuestion, updateQuestions } from './actions';
-import { INCREASE_SCORE, LOSE_LIFE, SET_NAME, SET_QUESTION } from './types';
+import {
+  doublePrize,
+  resetLives,
+  resetPrizePool,
+  resetSkips,
+  setQuestion,
+  updateQuestions,
+} from './actions';
+import {
+  END_GAME,
+  INCREASE_SCORE,
+  LOSE_LIFE,
+  SET_NAME,
+  SET_QUESTION,
+} from './types';
 
 export function* rootSaga() {
-  yield all([nameWatcher(), questionWatcher(), scoreWatcher(), wrongWatcher()]);
+  yield all([
+    nameWatcher(),
+    questionWatcher(),
+    scoreWatcher(),
+    wrongWatcher(),
+    endWatcher(),
+  ]);
 }
 
 function* nameWatcher() {
@@ -48,4 +67,14 @@ function* wrongWorker() {
   const state = yield select();
   const questions = yield state.questions.questions;
   yield put(setQuestion(questions));
+}
+
+function* endWatcher() {
+  yield takeEvery(END_GAME, endWorker);
+}
+
+function* endWorker() {
+  yield put(resetLives());
+  yield put(resetPrizePool());
+  yield put(resetSkips());
 }

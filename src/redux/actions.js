@@ -16,6 +16,9 @@ import {
   UPDATE_QUESTIONS,
   SET_QUESTION,
   DOUBLE_PRIZE_POOL,
+  LOSE_SKIP,
+  RESET_SKIPS,
+  END_GAME,
 } from './types';
 
 const url = process.env.REACT_APP_DB_URL;
@@ -56,6 +59,20 @@ export function increaseScore() {
 
 export function loseLife() {
   return { type: LOSE_LIFE };
+}
+
+export function resetSkips() {
+  return { type: RESET_SKIPS };
+}
+
+export function loseSkip() {
+  return { type: LOSE_SKIP };
+}
+
+export function endGame() {
+  return {
+    type: END_GAME,
+  };
 }
 
 //QUESTIONS
