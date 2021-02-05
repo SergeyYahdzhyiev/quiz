@@ -12,6 +12,7 @@ import {
   Admin,
   ThemesScreen,
   Confirm,
+  GameScreen,
 } from './pages';
 
 export const App = () => {
@@ -26,6 +27,7 @@ export const App = () => {
           <Route exact path='/player' component={PlayerScreen} />
           <Route exact path='/themes' component={ThemesScreen} />
           <Route exact path='/confirm' component={Confirm} />
+          <Route exact path='/game' component={GameScreen} />
           <Route exact path='/admin' component={Admin} />
         </Switch>
       </Container>
