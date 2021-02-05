@@ -26,6 +26,5 @@ function* questionWorker() {
   const payload = yield questions.filter(
     (q) => q.question !== question.question
   );
-  yield console.log(payload);
   yield put(updateQuestions(payload));
 }
