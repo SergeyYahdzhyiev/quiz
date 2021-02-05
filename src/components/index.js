@@ -6,3 +6,5 @@ export * from './ThemeButton';
 export * from './GameDisplay';
 export * from './AnswerButton';
 export * from './Answers';
+export * from './TopBar';
+export * from './Lives';

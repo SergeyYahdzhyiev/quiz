@@ -7,7 +7,9 @@ import styles from './answer.button.module.scss';
 
 export const AnswerButton = ({ text, id }) => {
   const dispatch = useDispatch();
+
   const { correct } = useSelector((state) => state.questions.question);
+
   const submitAnswer = (id) => {
     console.log(correct, id);
     if (id === correct) {
@@ -16,6 +18,7 @@ export const AnswerButton = ({ text, id }) => {
       dispatch(loseLife());
     }
   };
+
   return (
     <button className={styles.answer} onClick={() => submitAnswer(id)}>
       <p className={styles.answer_text}>{capitalize(text)}</p>
