@@ -15,6 +15,7 @@ import {
   LOSE_LIFE,
   UPDATE_QUESTIONS,
   SET_QUESTION,
+  DOUBLE_PRIZE_POOL,
 } from './types';
 
 const url = process.env.REACT_APP_DB_URL;
@@ -36,6 +37,12 @@ export function resetLives() {
 export function resetPrizePool() {
   return {
     type: RESET_PRIZE_POOL,
+  };
+}
+
+export function doublePrize() {
+  return {
+    type: DOUBLE_PRIZE_POOL,
   };
 }
 

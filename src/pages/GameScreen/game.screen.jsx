@@ -11,8 +11,8 @@ export const GameScreen = () => {
     <Container className={styles.game} fluid>
       <GameDisplay />
       <Answers />
-      <h1>Prize Pool: {prizePool}</h1>
-      <h3>Score: {score}</h3>
+      <h1 className={styles.score}>Score: {score}</h1>
+      <h3 className={styles.prize}>Prize Pool: {prizePool}</h3>
     </Container>
   );
 };

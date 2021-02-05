@@ -1,9 +1,9 @@
 import { takeEvery, all, select, put } from 'redux-saga/effects';
-import { updateQuestions } from './actions';
-import { SET_NAME, SET_QUESTION } from './types';
+import { doublePrize, setQuestion, updateQuestions } from './actions';
+import { INCREASE_SCORE, LOSE_LIFE, SET_NAME, SET_QUESTION } from './types';
 
 export function* rootSaga() {
-  yield all([nameWatcher(), questionWatcher()]);
+  yield all([nameWatcher(), questionWatcher(), scoreWatcher(), wrongWatcher()]);
 }
 
 function* nameWatcher() {
@@ -27,4 +27,25 @@ function* questionWorker() {
     (q) => q.question !== question.question
   );
   yield put(updateQuestions(payload));
+}
+
+function* scoreWatcher() {
+  yield takeEvery(INCREASE_SCORE, scoreWorker);
+}
+
+function* scoreWorker() {
+  const state = yield select();
+  const questions = yield state.questions.questions;
+  yield put(doublePrize());
+  yield put(setQuestion(questions));
+}
+
+function* wrongWatcher() {
+  yield takeEvery(LOSE_LIFE, wrongWorker);
+}
+
+function* wrongWorker() {
+  const state = yield select();
+  const questions = yield state.questions.questions;
+  yield put(setQuestion(questions));
 }

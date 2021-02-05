@@ -5,6 +5,7 @@ import {
   SET_NAME,
   INCREASE_SCORE,
   LOSE_LIFE,
+  DOUBLE_PRIZE_POOL,
 } from '../types';
 
 const initialState = {
@@ -22,6 +23,8 @@ export function gameReducer(state = initialState, action) {
       return { ...state, lives: 3 };
     case RESET_PRIZE_POOL:
       return { ...state, prizePool: 100 };
+    case DOUBLE_PRIZE_POOL:
+      return { ...state, prizePool: state.prizePool * 2 };
     case RESET_SCORE:
       return { ...state, score: 0 };
     case INCREASE_SCORE:
