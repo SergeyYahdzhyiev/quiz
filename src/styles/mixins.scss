@@ -64,4 +64,9 @@
   &:active {
     transform: scale(0.95);
   }
+  &:disabled {
+    &:active {
+      transform: none;
+    }
+  }
 }

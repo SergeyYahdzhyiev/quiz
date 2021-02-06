@@ -7,6 +7,7 @@ import {
   resetLives,
   resetPrizePool,
   resetSkips,
+  resetScore,
 } from '../actions';
 
 export function* nameWorker() {
@@ -40,6 +41,7 @@ export function* wrongWorker() {
 export function* endWorker() {
   yield put(resetLives());
   yield put(resetPrizePool());
+  yield put(resetScore());
   yield put(resetSkips());
 }
 

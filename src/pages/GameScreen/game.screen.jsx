@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { Container } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import { useHistory } from 'react-router';
 
 import { GameDisplay, Answers, TopBar } from '../../components';
@@ -25,12 +25,14 @@ export const GameScreen = () => {
       <TopBar />
       <GameDisplay />
       <Answers />
-      <h1 className={styles.score}>
-        Score: <strong>{score}</strong>
-      </h1>
-      <h3 className={styles.prize}>
-        Prize Pool: <strong>{prizePool}</strong>
-      </h3>
+      <Row className={styles.scores}>
+        <h1 className={styles.score}>
+          Score: <strong>{score}</strong>
+        </h1>
+        <h3 className={styles.prize}>
+          Prize Pool: <strong>{prizePool}</strong>
+        </h3>
+      </Row>
     </Container>
   );
 };

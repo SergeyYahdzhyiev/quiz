@@ -24,7 +24,11 @@ export const AnswerButton = ({ id }) => {
   };
 
   return (
-    <button className={styles.answer} onClick={() => submitAnswer(id)}>
+    <button
+      className={styles.answer}
+      onClick={() => submitAnswer(id)}
+      disabled={loading}
+    >
       {loading ? (
         <Loader />
       ) : (
