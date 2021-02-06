@@ -13,6 +13,8 @@ import {
   ThemesScreen,
   Confirm,
   GameScreen,
+  WinScreen,
+  LoseScreen,
 } from './pages';
 
 export const App = () => {
@@ -28,6 +30,8 @@ export const App = () => {
           <Route exact path='/themes' component={ThemesScreen} />
           <Route exact path='/confirm' component={Confirm} />
           <Route exact path='/game' component={GameScreen} />
+          <Route exact path='/win' component={WinScreen} />
+          <Route exact path='/lose' component={LoseScreen} />
           <Route exact path='/admin' component={Admin} />
         </Switch>
       </Container>
