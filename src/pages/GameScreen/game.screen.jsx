@@ -15,7 +15,7 @@ export const GameScreen = () => {
   const history = useHistory();
   const dispatch = useDispatch();
 
-  if (score >= 1000000) {
+  if (score >= 400) {
     history.push('/win');
   } else if (!lives) {
     dispatch(endGame());

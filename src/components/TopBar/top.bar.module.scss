@@ -12,6 +12,7 @@
     margin-right: 10px;
     &:active {
       transform: scale(0.95);
+      transition: none;
     }
     &:hover {
       color: $text-color-pink;

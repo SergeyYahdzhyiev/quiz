@@ -9,7 +9,7 @@ export const LoseScreen = () => {
     <Container className={styles.lose} fluid>
       <Container className={styles.lose_window}>
         <p className={styles.lose_window_text}>Unfortunately, you've lost...</p>
-        <Row className='m-0'>
+        <Row className='m-0 justify-content-center'>
           <button onClick={() => history.push('/themes')}>
             Back to Themes
           </button>

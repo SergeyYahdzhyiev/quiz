@@ -1,0 +1,48 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.win {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  animation: fade 500ms ease-in;
+
+  &_window {
+    max-width: 60vw;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    background: $button-gradient;
+
+    &_title {
+      text-align: center;
+      font-size: 2rem;
+      color: green;
+      font-weight: 800;
+    }
+
+    &_text {
+      margin: 1rem 0;
+      font-size: 1.5rem;
+      color: $text-color-alert;
+      strong {
+        font-weight: 800;
+      }
+    }
+  }
+  button {
+    @include button;
+    color: white;
+    background: $text-color-alert;
+    transition: transform 200ms ease;
+    font-size: 1.3rem;
+    &:hover {
+      transform: scale(1.08);
+    }
+    &:active {
+      transform: scale(0.95);
+      transition: none;
+    }
+  }
+}
