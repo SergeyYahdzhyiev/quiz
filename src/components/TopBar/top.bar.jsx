@@ -1,7 +1,7 @@
 import { Row } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 
-import { Lives } from '../';
+import { Lives, Skips } from '../';
 
 import styles from './top.bar.module.scss';
 
@@ -10,6 +10,7 @@ export const TopBar = () => {
   return (
     <Row className={styles.top_bar}>
       <Lives />
+      <Skips />
       <Row>
         <button>Skip Question</button>
         <button onClick={() => history.push('/end')}>End Game</button>

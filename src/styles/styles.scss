@@ -19,20 +19,24 @@ body {
 }
 
 .alerts-enter,
-.themes-enter {
+.themes-enter,
+.icons-enter {
   opacity: 0;
 }
 .alerts-enter-active,
-.themes-enter-active {
+.themes-enter-active,
+.icons-enter-active {
   opacity: 1;
   transition: opacity 500ms ease-in;
 }
 .alerts-exit,
-.themes-exit {
+.themes-exit,
+.icons-exit {
   opacity: 1;
 }
 .alerts-exit-active,
-.themes-exit-active {
+.themes-exit-active,
+.icons-exit-active {
   opacity: 0;
   transition: opacity 500ms ease-out;
 }

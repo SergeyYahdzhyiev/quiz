@@ -1,19 +1,19 @@
 import { Row } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
-import { ImHeart } from 'react-icons/im';
+import { GrRefresh } from 'react-icons/gr';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
-import styles from './lives.module.scss';
+import styles from './skips.module.scss';
 
-export const Lives = () => {
-  const { lives } = useSelector((state) => state.game);
+export const Skips = () => {
+  const { skips } = useSelector((state) => state.game);
 
   return (
-    <Row className={styles.lives}>
+    <Row classNames={styles.skips}>
       <TransitionGroup>
-        {Array.from({ length: lives }).map((_, i) => (
+        {Array.from({ length: skips }).map((_, i) => (
           <CSSTransition key={i} classNames='icons' timeout={500}>
-            <ImHeart className={styles.heart} />
+            <GrRefresh className={styles.skip} />
           </CSSTransition>
         ))}
       </TransitionGroup>

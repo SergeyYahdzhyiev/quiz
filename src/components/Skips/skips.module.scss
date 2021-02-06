@@ -1,6 +1,6 @@
 @import '../../styles/variables.scss';
 
-.lives {
+.skips {
   padding: 0 1rem;
   margin: 0;
   background: $button-gradient;
@@ -9,8 +9,8 @@
   border-radius: 1.5rem;
   width: 160px;
 }
-.heart {
-  color: rgb(197, 12, 12);
+.skip {
+  color: $text-color-alert;
   font-size: 2rem;
   margin: 0 5px;
 }

@@ -8,3 +8,4 @@ export * from './AnswerButton';
 export * from './Answers';
 export * from './TopBar';
 export * from './Lives';
+export * from './Skips';
