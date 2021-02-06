@@ -19,6 +19,8 @@ import {
   LOSE_SKIP,
   RESET_SKIPS,
   END_GAME,
+  SHOW_MODAL,
+  HIDE_MODAL,
 } from './types';
 
 const url = process.env.REACT_APP_DB_URL;
@@ -172,4 +174,12 @@ export function hideAlert() {
   return {
     type: HIDE_ALERT,
   };
+}
+//Modal
+export function showModal() {
+  return { type: SHOW_MODAL };
+}
+
+export function hideModal() {
+  return { type: HIDE_MODAL };
 }

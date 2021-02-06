@@ -20,23 +20,27 @@ body {
 
 .alerts-enter,
 .themes-enter,
-.icons-enter {
+.icons-enter,
+.modal-enter {
   opacity: 0;
 }
 .alerts-enter-active,
 .themes-enter-active,
-.icons-enter-active {
+.icons-enter-active,
+.modal-enter-active {
   opacity: 1;
   transition: opacity 500ms ease-in;
 }
 .alerts-exit,
 .themes-exit,
-.icons-exit {
+.icons-exit,
+.modal-exit {
   opacity: 1;
 }
 .alerts-exit-active,
 .themes-exit-active,
-.icons-exit-active {
+.icons-exit-active,
+.modal-exit-active {
   opacity: 0;
   transition: opacity 500ms ease-out;
 }
