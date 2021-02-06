@@ -9,7 +9,7 @@ export const Skips = () => {
   const { skips } = useSelector((state) => state.game);
 
   return (
-    <Row classNames={styles.skips}>
+    <Row className={styles.skips}>
       <TransitionGroup>
         {Array.from({ length: skips }).map((_, i) => (
           <CSSTransition key={i} classNames='icons' timeout={500}>

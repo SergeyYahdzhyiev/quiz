@@ -9,8 +9,10 @@ export const TopBar = () => {
   const history = useHistory();
   return (
     <Row className={styles.top_bar}>
-      <Lives />
-      <Skips />
+      <Row>
+        <Lives />
+        <Skips />
+      </Row>
       <Row>
         <button>Skip Question</button>
         <button onClick={() => history.push('/end')}>End Game</button>
