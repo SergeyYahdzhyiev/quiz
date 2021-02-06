@@ -20,3 +20,6 @@ export const HIDE_LOADER = 'QUESTIONS:HIDE_LOADER';
 //ALERT
 export const SHOW_ALERT = 'ALERT:SHOW_ALERT';
 export const HIDE_ALERT = 'ALERT:HIDE_ALERT';
+//MODAL
+export const SHOW_MODAL = 'MODAL:SHOW_MODAL';
+export const HIDE_MODAL = 'MODAL:HIDE_MODAL';
