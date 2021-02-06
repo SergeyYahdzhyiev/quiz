@@ -20,27 +20,42 @@ body {
 
 .alerts-enter,
 .themes-enter,
-.icons-enter,
-.modal-enter {
+.icons-enter {
   opacity: 0;
 }
 .alerts-enter-active,
 .themes-enter-active,
-.icons-enter-active,
-.modal-enter-active {
+.icons-enter-active {
   opacity: 1;
   transition: opacity 500ms ease-in;
 }
 .alerts-exit,
 .themes-exit,
-.icons-exit,
-.modal-exit {
+.icons-exit {
   opacity: 1;
 }
 .alerts-exit-active,
 .themes-exit-active,
-.icons-exit-active,
-.modal-exit-active {
+.icons-exit-active {
   opacity: 0;
   transition: opacity 500ms ease-out;
+}
+
+.modals-enter {
+  opacity: 0;
+  z-index: -1;
+}
+.modals-enter-active {
+  opacity: 1;
+  z-index: 1000;
+  transition: opacity 500ms ease-in;
+}
+.modals-exit {
+  opacity: 1;
+  z-index: 1000;
+}
+.modals-exit-active {
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 500ms ease-in;
 }

@@ -1,0 +1,47 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.modal {
+  &_overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: (rgba(0, 0, 0, 0.5));
+  }
+  &_window {
+    max-width: 50vw;
+    padding: 1.5rem;
+    background: $button-gradient;
+    border-radius: 1.5rem;
+  }
+  &_text {
+    color: $text-color-alert;
+    font-size: 1.5rem;
+  }
+  &_footer {
+    margin: 0;
+    justify-content: flex-end;
+    button {
+      @include button;
+      font-size: 1.3rem;
+      color: white;
+      margin-right: 1rem;
+      background: rgb(175, 146, 175);
+      transition: transform 200ms ease;
+      &:first-of-type {
+        background: $text-color-alert;
+      }
+      &:hover {
+        transform: scale(1.08);
+      }
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+}
