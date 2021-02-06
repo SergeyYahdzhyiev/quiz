@@ -24,7 +24,13 @@ export const ThemesScreen = () => {
     <Container className={styles.themes} fluid>
       <h1>Hello {name}!</h1>
       <h4>Please, choose one of the themes:</h4>
-      {loading ? <Loader /> : <ThemesList />}
+      {loading ? (
+        <Container className='mt-5'>
+          <Loader />
+        </Container>
+      ) : (
+        <ThemesList />
+      )}
       <Container className='text-center'>
         <CSSTransition
           in={show}

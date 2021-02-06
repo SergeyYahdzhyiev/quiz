@@ -99,11 +99,14 @@ export function updateQuestions(newQuestions) {
 }
 
 export function setQuestion(questions) {
-  const index = Math.floor(Math.random() * questions.length);
-  const payload = questions[index];
-  return {
-    type: SET_QUESTION,
-    payload,
+  return function (dispatch) {
+    dispatch(showLoader());
+    setTimeout(() => {
+      const index = Math.floor(Math.random() * questions.length);
+      const payload = questions[index];
+      dispatch({ type: SET_QUESTION, payload });
+      dispatch(hideLoader());
+    }, 1000);
   };
 }
 

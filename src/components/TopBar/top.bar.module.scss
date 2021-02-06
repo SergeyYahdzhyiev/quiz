@@ -17,5 +17,12 @@
       color: $text-color-pink;
       box-shadow: 0 0 5px 1px $text-color-pink;
     }
+    &:disabled {
+      background: lightgray;
+      &:hover {
+        color: $text-color-button;
+        box-shadow: none;
+      }
+    }
   }
 }

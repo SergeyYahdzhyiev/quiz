@@ -3,4 +3,5 @@
 
 .answer {
   @include answer-button;
+  min-height: 8rem;
 }

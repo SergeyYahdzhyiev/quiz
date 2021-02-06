@@ -11,6 +11,7 @@ import {
   END_GAME,
   INCREASE_SCORE,
   LOSE_LIFE,
+  LOSE_SKIP,
   SET_NAME,
   SET_QUESTION,
 } from './types';
@@ -22,6 +23,7 @@ export function* rootSaga() {
     scoreWatcher(),
     wrongWatcher(),
     endWatcher(),
+    skipWatcher(),
   ]);
 }
 
@@ -77,4 +79,14 @@ function* endWorker() {
   yield put(resetLives());
   yield put(resetPrizePool());
   yield put(resetSkips());
+}
+
+function* skipWatcher() {
+  yield takeEvery(LOSE_SKIP, skipWorker);
+}
+
+function* skipWorker() {
+  const state = yield select();
+  const questions = yield state.questions.questions;
+  yield put(setQuestion(questions));
 }
