@@ -15,7 +15,6 @@ export const AnswerButton = ({ id }) => {
   const text = content && content[id];
 
   const submitAnswer = (id) => {
-    console.log(correct, id);
     if (id === correct) {
       dispatch(increaseScore());
     } else {
