@@ -2,10 +2,16 @@
 @import '../../styles/mixins.scss';
 
 .top_bar {
+  //sizing
   max-width: 80vw;
+
+  //display
+  justify-content: space-between;
+
+  //margins and paddings
   margin: 0 auto;
   margin-bottom: 1rem;
-  justify-content: space-between;
+
   button {
     @include button;
     letter-spacing: initial;

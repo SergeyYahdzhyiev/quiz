@@ -1,58 +1,104 @@
 @import './variables.scss';
 
 @mixin button {
+  // margins & paddings
+  padding: 0.5rem 2rem;
+
+  // typo
   letter-spacing: 2px;
   font-weight: 800;
+
+  //background
   background: $button-gradient;
   border: none;
+
+  //border
   border-radius: 50px;
-  padding: 0.5rem 2rem;
+
+  //colors
   color: $text-color-button;
 }
 
 @mixin alert {
+  //display
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
+
+  //sizing
   max-width: max-content;
+
+  // margins & paddings
   padding: 1rem 1.5rem;
   margin-top: 1rem;
-  border-radius: 2rem;
-  background: $button-gradient;
-  color: $text-color-alert;
+
+  //typo
   font-size: 1rem;
+
+  //background
+  background: $button-gradient;
+
+  //border
+  border-radius: 2rem;
+
+  //colors
+  color: $text-color-alert;
+
+  //transitions, animations, transform
   transition: opacity 200ms;
+
   p {
     margin: 0;
     font-weight: 800;
   }
+
   button {
-    background: $text-color-alert;
-    border: none;
-    color: $color-white;
-    font-weight: 800;
-    border-radius: 50%;
+    //margins & paddings
     padding: 0 7px;
     margin-left: 10px;
+
+    //typo
+    font-weight: 800;
+
+    //background
+    background: $text-color-alert;
+
+    //border
+    border: none;
+    border-radius: 50%;
+
+    //colors
+    color: $color-white;
   }
 }
 
 @mixin answer-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  //display
+  @include default-flex;
   flex: 1;
+
+  //margins & paddings
   margin: 0 2px;
   margin-bottom: 4px;
   padding: 1rem;
-  border: none;
+
+  //background
   background: $answer-button-background;
+
+  //border
+  border: none;
+
   &_text {
-    color: $text-color-button;
+    //margins & paddings
     margin: 0;
+
+    //typo
     font-weight: 800;
     font-size: 1.5rem;
+
+    //colors
+    color: $text-color-button;
   }
   &:hover {
     box-shadow: 0 0 8px 1px $text-color-pink;
@@ -68,4 +114,28 @@
       transform: none;
     }
   }
+}
+
+@mixin display-text {
+  //typo
+  font-size: 2rem;
+  font-weight: 800;
+
+  //shadows
+  text-shadow: $display-text-shadow;
+
+  //transitions, animations, transform
+  animation: slide 500ms ease-in;
+}
+
+@mixin default-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin default-flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

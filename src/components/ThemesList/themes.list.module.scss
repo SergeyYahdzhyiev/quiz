@@ -1,5 +1,5 @@
+@import '../../styles/mixins.scss';
+
 .themes_list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include default-flex-column;
 }

@@ -7,14 +7,23 @@ body {
 }
 
 .wrapper {
+  //position
   position: relative;
   top: 0;
   left: 0;
-  margin: 0;
-  padding: 0;
+
+  //sizing
   width: 100%;
   min-height: 100vh;
+
+  //margins and apaddings
+  margin: 0;
+  padding: 0;
+
+  //typo
   font-family: $font-main;
+
+  //background
   background: $backgroun-gradient;
 }
 

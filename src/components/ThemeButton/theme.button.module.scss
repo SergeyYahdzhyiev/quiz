@@ -3,12 +3,22 @@
 
 .theme_button {
   @include button;
+  //sizing
+  min-width: 200px;
+
+  //margins and paddings
   margin-top: 1rem;
-  color: $text-color-alert;
+
+  //typo
   font-weight: 300;
   font-size: 2rem;
-  min-width: 200px;
+
+  //colors
+  color: $text-color-alert;
+
+  //borders
   border-radius: 0.8rem;
+
   &:hover {
     @include button;
     font-weight: 300;

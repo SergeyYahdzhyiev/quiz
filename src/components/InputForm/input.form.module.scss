@@ -1,19 +1,28 @@
 @import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
 
 .input {
   form {
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    @include default-flex;
+
     input {
-      background-color: inherit;
-      border: 3px solid $text-color-primary;
-      caret-color: $text-color-primary;
-      color: $text-color-primary;
+      //margins and paddings
+      padding: 5px 0;
+
+      //typo
       font-weight: 800;
       text-align: center;
-      padding: 5px 0;
       letter-spacing: 2px;
+      //background
+      background-color: inherit;
+
+      //borders
+      border: 3px solid $text-color-primary;
+
+      //colors
+      caret-color: $text-color-primary;
+      color: $text-color-primary;
+
       &:focus {
         outline: none;
       }
@@ -21,24 +30,38 @@
         max-width: 50%;
       }
     }
+
     button {
-      border: none;
-      background-color: $text-color-primary;
-      color: $text-color-button;
-      font-weight: 800;
-      letter-spacing: 3px;
+      //sizing
+      height: 100%;
+
+      //margins and paddings
       margin: 0 5px;
       padding-left: 20px;
       padding-right: 20px;
-      height: 100%;
+
+      //typo
+      font-weight: 800;
+      letter-spacing: 3px;
+
+      //background
+      background-color: $text-color-primary;
+
+      //borders
+      border: none;
+
+      //colors
+      color: $text-color-button;
 
       &:hover {
         color: $input-form-button-hover-color;
         box-shadow: $input-form-button-hover-shadow;
       }
+
       &:active {
         transform: scale(0.9);
       }
+
       @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
         font-size: 0.8rem;
         padding-left: 10px;

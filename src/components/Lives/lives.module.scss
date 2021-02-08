@@ -1,15 +1,25 @@
 @import '../../styles/variables.scss';
 
 .lives {
+  //display
+  justify-content: flex-start;
+  align-items: center;
+
+  //sizing
+  width: 160px;
+
+  //margins and paddings
   padding: 0 1rem;
   margin: 0;
   margin-right: 10px;
+
+  //background
   background: $button-gradient;
-  justify-content: flex-start;
-  align-items: center;
+
+  //borders
   border-radius: 1.5rem;
-  width: 160px;
 }
+
 .heart {
   color: $heart-color;
   font-size: 2rem;

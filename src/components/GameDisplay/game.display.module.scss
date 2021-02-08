@@ -1,34 +1,37 @@
 @import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
 
 .display {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1.5rem;
+  //display
+  @include default-flex;
+
+  //sizing
   width: 60vw;
   height: 45vh;
-  color: $text-color-primary;
+
+  //margins & paddings
+  padding: 0 1.5rem;
+
+  //backgrounds
   background: $display-background;
+
+  //shadows
   box-shadow: $display-shadow;
 
+  //colors
+  color: $text-color-primary;
+
   &_question {
-    font-size: 2rem;
-    font-weight: 800;
-    text-shadow: $display-text-shadow;
-    animation: slide 500ms ease-in;
+    @include display-text;
   }
   &_correct {
+    @include display-text;
     color: $display-color-correct;
     font-size: 4rem;
-    font-weight: 800;
-    text-shadow: $display-text-shadow;
-    animation: slide 500ms ease-in;
   }
   &_wrong {
+    @include display-text;
     color: $display-color-wrong;
     font-size: 4rem;
-    font-weight: 800;
-    text-shadow: $display-text-shadow;
-    animation: slide 500ms ease-in;
   }
 }
