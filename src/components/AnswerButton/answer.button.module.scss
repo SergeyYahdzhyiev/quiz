@@ -4,4 +4,5 @@
 .answer {
   @include answer-button;
   min-height: 8rem;
+  border-radius: 0.8rem;
 }

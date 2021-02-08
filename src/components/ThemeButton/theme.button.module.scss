@@ -3,6 +3,7 @@
 
 .theme_button {
   @include button;
+
   //sizing
   min-width: 200px;
 
@@ -16,13 +17,14 @@
   //colors
   color: $text-color-alert;
 
-  //borders
-  border-radius: 0.8rem;
-
   &:hover {
     @include button;
     font-weight: 300;
     box-shadow: 0 0 8px 3px $button-shadow-color;
     color: $text-color-pink;
+  }
+
+  &:active {
+    transform: scale(0.95);
   }
 }

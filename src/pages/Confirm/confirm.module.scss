@@ -63,7 +63,7 @@
     &:hover {
       @include button;
 
-      background: modal;
+      background: $modal-secondary-button-background;
       color: $color-white;
       transform: scale(1.1);
     }
@@ -80,6 +80,7 @@
 
     &:active {
       transform: scale(0.9);
+      transition: none;
     }
   }
 }
