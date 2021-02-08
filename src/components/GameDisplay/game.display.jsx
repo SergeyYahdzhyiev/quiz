@@ -11,18 +11,26 @@ export const GameDisplay = () => {
   const { question, loading, questions } = useSelector(
     (state) => state.questions
   );
+  const { message } = useSelector((state) => state.display);
 
   useEffect(() => {
     dispatch(setQuestion(questions));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  return (
-    <Container className={styles.display}>
-      {loading ? (
-        <Loader />
-      ) : (
-        <h3 className={styles.display_question}>{question.question}</h3>
-      )}
-    </Container>
-  );
+
+  function getContent() {
+    if (loading && !message) {
+      return <Loader />;
+    } else if (message) {
+      switch (message) {
+        case 'Correct!':
+          return <h3 className={styles.display_correct}>{message}</h3>;
+        default:
+          return <h3 className={styles.display_wrong}>{message}</h3>;
+      }
+    } else {
+      return <h3 className={styles.display_question}>{question.question}</h3>;
+    }
+  }
+  return <Container className={styles.display}>{getContent()}</Container>;
 };

@@ -16,4 +16,18 @@
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     animation: slide 500ms ease-in;
   }
+  &_correct {
+    color: greenyellow;
+    font-size: 4rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    animation: slide 500ms ease-in;
+  }
+  &_wrong {
+    color: rgb(196, 4, 4);
+    font-size: 4rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    animation: slide 500ms ease-in;
+  }
 }
