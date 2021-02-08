@@ -18,7 +18,7 @@
     &_title {
       text-align: center;
       font-size: 2rem;
-      color: green;
+      color: $color-green;
       font-weight: 800;
     }
 
@@ -33,7 +33,7 @@
   }
   button {
     @include button;
-    color: white;
+    color: $color-white;
     background: $text-color-alert;
     transition: transform 200ms ease;
     font-size: 1.3rem;

@@ -3,10 +3,10 @@
   padding: 1rem;
 }
 .score {
-  color: lightgreen;
+  color: $score-color;
 }
 .prize {
-  color: orange;
+  color: $prize-color;
 }
 .scores {
   max-width: 80vw;

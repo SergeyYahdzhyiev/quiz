@@ -3,7 +3,6 @@
 @mixin button {
   letter-spacing: 2px;
   font-weight: 800;
-  background: #ffefba;
   background: $button-gradient;
   border: none;
   border-radius: 50px;
@@ -31,7 +30,7 @@
   button {
     background: $text-color-alert;
     border: none;
-    color: white;
+    color: $color-white;
     font-weight: 800;
     border-radius: 50%;
     padding: 0 7px;

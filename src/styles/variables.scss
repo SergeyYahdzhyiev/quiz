@@ -1,6 +1,10 @@
 @import '../assets/fonts/fonts.scss';
 
+//fonts
+
 $font-main: 'Gilroy', sans-serif;
+
+//backgrounds
 
 $backgroun-gradient: linear-gradient(
   50deg,
@@ -9,15 +13,35 @@ $backgroun-gradient: linear-gradient(
   rgba(205, 1, 193, 1) 80%,
   rgb(207, 42, 196) 100%
 );
-
 $button-gradient: linear-gradient(to right, #fafbff, #ffffff);
-$button-shadow-color: rgba(243, 55, 212, 0.5);
 $answer-button-background: rgb(255, 224, 253);
+$display-background: rgb(70, 2, 133);
+$modal-overlay-background: rgba(0, 0, 0, 0.5);
+$modal-secondary-button-background: rgb(175, 146, 175);
+
+//shadows
+
+$display-shadow: inset 0 0 8px 3px rgba(0, 0, 0, 0.5);
+$display-text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+$input-form-button-hover-shadow: 0 0 5px 1px rgba(255, 102, 222, 0.5);
+
+//colors
 
 $text-color-pink: rgb(243, 55, 212);
 $text-color-primary: rgb(247, 209, 129);
-$text-color-button: purple;
+$text-color-button: rgb(128, 0, 128);
 $text-color-alert: rgb(77, 77, 255);
+$color-white: white;
+$color-green: rgb(0, 163, 22);
+$button-shadow-color: rgba(243, 55, 212, 0.5);
+$display-color-wrong: rgb(196, 4, 4);
+$display-color-correct: rgb(151, 224, 40);
+$input-form-button-hover-color: rgb(248, 61, 208);
+$heart-color: rgb(197, 12, 12);
+$score-color: rgb(96, 221, 96);
+$prize-color: rgb(219, 143, 1);
+
+//animations
 
 @keyframes fade {
   0% {

@@ -8,26 +8,27 @@
   width: 60vw;
   height: 45vh;
   color: $text-color-primary;
-  background: rgb(70, 2, 133);
-  box-shadow: inset 0 0 8px 3px rgba(0, 0, 0, 0.5);
+  background: $display-background;
+  box-shadow: $display-shadow;
+
   &_question {
     font-size: 2rem;
     font-weight: 800;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-shadow: $display-text-shadow;
     animation: slide 500ms ease-in;
   }
   &_correct {
-    color: greenyellow;
+    color: $display-color-correct;
     font-size: 4rem;
     font-weight: 800;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-shadow: $display-text-shadow;
     animation: slide 500ms ease-in;
   }
   &_wrong {
-    color: rgb(196, 4, 4);
+    color: $display-color-wrong;
     font-size: 4rem;
     font-weight: 800;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-shadow: $display-text-shadow;
     animation: slide 500ms ease-in;
   }
 }
