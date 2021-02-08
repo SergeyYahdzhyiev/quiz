@@ -8,6 +8,7 @@ import {
   resetPrizePool,
   resetSkips,
   resetScore,
+  showMessage,
 } from '../actions';
 
 export function* nameWorker() {
@@ -28,6 +29,7 @@ export function* questionWorker() {
 export function* scoreWorker() {
   const state = yield select();
   const questions = yield state.questions.questions;
+  yield put(showMessage('Correct!'));
   yield put(doublePrize());
   yield put(setQuestion(questions));
 }
@@ -35,6 +37,7 @@ export function* scoreWorker() {
 export function* wrongWorker() {
   const state = yield select();
   const questions = yield state.questions.questions;
+  yield put(showMessage('Wrong!'));
   yield put(setQuestion(questions));
 }
 

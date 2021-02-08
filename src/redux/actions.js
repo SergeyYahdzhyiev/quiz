@@ -21,6 +21,8 @@ import {
   END_GAME,
   SHOW_MODAL,
   HIDE_MODAL,
+  HIDE_MESSAGE,
+  SHOW_MESSAGE,
 } from './types';
 
 const url = process.env.REACT_APP_DB_URL;
@@ -182,4 +184,20 @@ export function showModal() {
 
 export function hideModal() {
   return { type: HIDE_MODAL };
+}
+//Display
+
+export function showMessage(messageText) {
+  return function (dispatch) {
+    const payload = messageText;
+
+    dispatch({ type: SHOW_MESSAGE, payload });
+    setTimeout(() => {
+      dispatch(hideMessage());
+    }, 1000);
+  };
+}
+
+export function hideMessage() {
+  return { type: HIDE_MESSAGE };
 }
