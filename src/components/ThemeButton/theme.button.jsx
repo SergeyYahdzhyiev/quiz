@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { fetchQuestions, setTheme } from '../../redux/actions';
+import { setTheme } from '../../redux/actions';
 import { useHistory } from 'react-router-dom';
 
 import { capitalize } from '../../plugins';
@@ -12,7 +12,6 @@ export const ThemeButton = ({ text }) => {
 
   const handler = (theme) => {
     dispatch(setTheme(theme));
-    dispatch(fetchQuestions(theme));
     history.push('/confirm');
   };
 

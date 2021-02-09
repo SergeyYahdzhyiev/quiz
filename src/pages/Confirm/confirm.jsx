@@ -1,4 +1,5 @@
-import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { Container, Row } from 'react-bootstrap';
 import { CSSTransition } from 'react-transition-group';
@@ -6,11 +7,17 @@ import { CSSTransition } from 'react-transition-group';
 import styles from './confirm.module.scss';
 import { capitalize } from '../../plugins';
 import { Alert } from '../../components';
+import { fetchQuestions } from '../../redux/actions';
 
 export const Confirm = () => {
   const history = useHistory();
+  const dispatch = useDispatch();
   const { theme } = useSelector((state) => state.questions);
   const { show } = useSelector((state) => state.alert);
+
+  useEffect(() => {
+    dispatch(fetchQuestions(theme));
+  });
 
   return (
     <>
