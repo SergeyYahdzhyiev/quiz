@@ -7,11 +7,13 @@ import {
   wrongWatcher,
   endWatcher,
   skipWatcher,
+  themeWatcher,
 } from './watchers';
 
 export function* rootSaga() {
   yield all([
     nameWatcher(),
+    themeWatcher(),
     questionWatcher(),
     scoreWatcher(),
     wrongWatcher(),

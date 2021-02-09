@@ -10,7 +10,7 @@ import {
 
 const initialState = {
   themes: [],
-  theme: '',
+  theme: localStorage.getItem('quizTheme') || 'test',
   questions: [],
   question: {},
   loading: false,

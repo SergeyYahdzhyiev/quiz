@@ -16,6 +16,11 @@ export function* nameWorker() {
   yield localStorage.setItem('playerName', state.game.name);
 }
 
+export function* themeWorker() {
+  const state = yield select();
+  yield localStorage.setItem('quizTheme', state.questions.theme);
+}
+
 export function* questionWorker() {
   const state = yield select();
   const question = yield state.questions.question;

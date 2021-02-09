@@ -7,6 +7,7 @@ import {
   LOSE_LIFE,
   LOSE_SKIP,
   END_GAME,
+  SET_THEME,
 } from '../types';
 
 import {
@@ -16,10 +17,15 @@ import {
   wrongWorker,
   endWorker,
   skipWorker,
+  themeWorker,
 } from './workers';
 
 export function* nameWatcher() {
   yield takeEvery(SET_NAME, nameWorker);
+}
+
+export function* themeWatcher() {
+  yield takeEvery(SET_THEME, themeWorker);
 }
 
 export function* questionWatcher() {
