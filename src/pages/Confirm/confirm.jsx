@@ -17,7 +17,7 @@ export const Confirm = () => {
 
   useEffect(() => {
     dispatch(fetchQuestions(theme));
-  });
+  }, []);
 
   return (
     <>
