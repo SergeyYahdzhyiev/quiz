@@ -17,6 +17,7 @@ export const Confirm = () => {
 
   useEffect(() => {
     dispatch(fetchQuestions(theme));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
