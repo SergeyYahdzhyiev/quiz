@@ -23,6 +23,7 @@ import {
   HIDE_MODAL,
   HIDE_MESSAGE,
   SHOW_MESSAGE,
+  SET_QUESTIONS,
 } from './types';
 
 const url = process.env.REACT_APP_DB_URL;
@@ -80,23 +81,32 @@ export function endGame() {
 }
 
 //QUESTIONS
+
 export function fetchQuestions(theme) {
-  return async function (dispatch) {
-    try {
-      dispatch(showLoader());
-      const res = await axios.get(`${url}/themes/${theme}.json`);
-
-      const payload = Object.values(res.data)[0];
-
-      dispatch({ type: FETCH_QUESTIONS, payload });
-      dispatch(hideLoader());
-    } catch (e) {
-      dispatch(hideLoader());
-      dispatch(showAlert('Something went wrong =(', true));
-      console.error(e.name + ':' + e.message);
-    }
-  };
+  return { type: FETCH_QUESTIONS, payload: theme };
 }
+
+export function setQuestions(questions) {
+  return { type: SET_QUESTIONS, payload: questions };
+}
+
+// export function fetchQuestions(theme) {
+//   return async function (dispatch) {
+//     try {
+//       dispatch(showLoader());
+//       const res = await axios.get(`${url}/themes/${theme}.json`);
+
+//       const payload = Object.values(res.data)[0];
+
+//       dispatch(fetchQAction(payload));
+//       dispatch(hideLoader());
+//     } catch (e) {
+//       dispatch(hideLoader());
+//       dispatch(showAlert('Something went wrong =(', true));
+//       console.error(e.name + ':' + e.message);
+//     }
+//   };
+// }
 
 export function updateQuestions(newQuestions) {
   return { type: UPDATE_QUESTIONS, payload: newQuestions };

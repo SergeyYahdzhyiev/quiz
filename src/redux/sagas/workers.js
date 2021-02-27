@@ -9,7 +9,23 @@ import {
   resetSkips,
   resetScore,
   showMessage,
+  hideLoader,
+  showAlert,
+  setQuestions,
 } from '../actions';
+import { fetchQuestionsApi } from '../api';
+
+export function* fetchWorker({ payload }) {
+  try {
+    const data = yield fetchQuestionsApi(payload);
+    console.log(data);
+    yield put(setQuestions(data));
+  } catch (e) {
+    yield put(hideLoader());
+    yield put(showAlert('Something went wrong =(', true));
+    console.error(e.name + ':' + e.message);
+  }
+}
 
 export function* nameWorker() {
   const state = yield select();

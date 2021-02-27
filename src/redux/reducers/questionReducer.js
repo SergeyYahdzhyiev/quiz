@@ -1,5 +1,5 @@
 import {
-  FETCH_QUESTIONS,
+  SET_QUESTIONS,
   SET_THEME,
   SET_QUESTION,
   FETCH_THEMES,
@@ -18,7 +18,7 @@ const initialState = {
 
 export function questionReducer(state = initialState, action) {
   switch (action.type) {
-    case FETCH_QUESTIONS:
+    case SET_QUESTIONS:
       return { ...state, questions: action.payload };
     case UPDATE_QUESTIONS:
       return { ...state, questions: action.payload };

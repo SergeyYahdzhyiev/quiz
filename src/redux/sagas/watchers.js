@@ -8,6 +8,7 @@ import {
   LOSE_SKIP,
   END_GAME,
   SET_THEME,
+  FETCH_QUESTIONS,
 } from '../types';
 
 import {
@@ -18,7 +19,12 @@ import {
   endWorker,
   skipWorker,
   themeWorker,
+  fetchWorker,
 } from './workers';
+
+export function* fetchWatcher() {
+  yield takeEvery(FETCH_QUESTIONS, fetchWorker);
+}
 
 export function* nameWatcher() {
   yield takeEvery(SET_NAME, nameWorker);
